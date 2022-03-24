@@ -2,22 +2,28 @@ import React from "react";
 
 import dummyData from "../../dummy-meals.js";
 
+import Card from "../UI/Card/Card.js";
+import LiElement from "../UI/LiElement/LiElement";
+
 import styles from "./AvailableMeals.module.css";
 
 const AvailableMeals = () => {
   const mealsList = dummyData.map((meal) => {
     return (
-      <li key={meal.id}>
-        <h2>{meal.name}</h2>
-        <p>{meal.description}</p>
-        <p>{meal.price}</p>
-      </li>
+      <LiElement
+        id={meal.id}
+        name={meal.name}
+        description={meal.description}
+        price={meal.price}
+      />
     );
   });
   return (
-    <section className={styles.meals}>
-      <ul>{mealsList}</ul>
-    </section>
+    <Card>
+      <section className={styles.meals}>
+        <ul>{mealsList}</ul>
+      </section>
+    </Card>
   );
 };
 

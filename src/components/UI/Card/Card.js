@@ -1,9 +1,9 @@
 import React from "react";
 
+import styles from "./Card.module.css"
+
 const Card = (props) => {
-
-    return <h4>This is the Cart</h4>
-}
-
+  return <div className={styles.card}>{props.children}</div>;
+};
 
 export default Card;
