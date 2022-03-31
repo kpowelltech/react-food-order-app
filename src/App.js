@@ -4,6 +4,7 @@ import Header from "./components/Layout/Header/Header";
 import Cart from "./components/Cart/Cart";
 
 import Meals from "./components/Meals/Meals";
+import CartProvider from "./store/CartProvider";
 
 const App = () => {
 
@@ -20,13 +21,13 @@ const App = () => {
 
   }
   return (
-    <React.Fragment>
+    <CartProvider>
       {cartIsOpen ? <Cart onButtonClick={cartShowHandler}/> : null}
       <Header onButtonClick={cartShowHandler}/>
       <main>
         <Meals />
       </main>
-    </React.Fragment>
+    </CartProvider>
   );
 };
 

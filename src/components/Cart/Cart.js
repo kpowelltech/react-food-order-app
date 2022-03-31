@@ -13,10 +13,6 @@ const Cart = (props) => {
     </ul>
   );
 
-  // const buttonClickHandler =()=> {
-  //   props.onButtonClick()
-  // }
-
   return (
     <Modal onClose={props.onButtonClick}>
       {cartItems}

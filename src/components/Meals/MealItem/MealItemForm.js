@@ -4,8 +4,13 @@ import Input from "../../UI/Input/Input";
 import styles from "./MealItemForm.module.css";
 
 const MealItemForm = (props) => {
+
+  const onSubmitHandler =(e)=> {
+    e.preventDefault()
+  }
+  
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={onSubmitHandler}>
       <Input
         label="Amount"
         input={{
